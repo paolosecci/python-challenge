@@ -51,7 +51,7 @@ for votes in candidate_counts:
 print("Winner: " + str(unique_candidates[index]))
 print("--------------")
 for i in range(0, len(unique_candidates)):
-    print(str(unique_candidates[i]) + ": " + str(candidate_percentages[i]) + " (" + str(candidate_counts[i]) + ")")
+    print(str(unique_candidates[i]) + ": " + str(100*candidate_percentages[i]) + "% (" + str(candidate_counts[i]) + ")")
 print("--------------")
 print("Total Votes: " + str(vote_count) + "\n")
 
