@@ -48,13 +48,22 @@ for votes in candidate_counts:
         index = i
     i += 1
 
-print("Winner: " + str(unique_candidates[index]))
-print("--------------")
+outString = ''
+
+outString+= 'ELECTION RESULTS\n'
+outString+= '------------------------\n'
+
+outString+= ('Total Votes: ' + str(vote_count) + "\n")
+outString+= '------------------------\n'
+
 for i in range(0, len(unique_candidates)):
-    print(str(unique_candidates[i]) + ": " + str(100*candidate_percentages[i]) + "% (" + str(candidate_counts[i]) + ")")
-print("--------------")
-print("Total Votes: " + str(vote_count) + "\n")
+	outString+= str(unique_candidates[i]) + ":\t" + str(100*candidate_percentages[i]) + "% (" + str(candidate_counts[i]) + ")\n"
+outString+= '------------------------\n'
 
+outString+= 'Winner: ' + str(unique_candidates[index]) + '\n'
 
+print(outString)
 
-
+textfile = open('out.txt', 'w')
+textfile.write(outString)
+textfile.close()

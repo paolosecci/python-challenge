@@ -39,9 +39,19 @@ average_change_per_month = net_flux / month_count
 
 
 #summary
-print("this summary covers " + str(month_count) + " months")
-print("the net flux over those months is: " + str(net_flux))
-print("the average change in the account per month: " + str(average_change_per_month))
-print("the greatest increase in the account occured on " + str(current_max_delta[0]) + " for $" + str(current_max_delta[1]))
-print("the greatest decrease in the account occured on " + str(current_min_delta[0]) + " for $" + str(current_min_delta[1]))
-print("")
+outString = ''
+
+outString+= 'FINANCIAL ANALYSIS\n'
+outString+= '-----------------------\n'
+
+outString+= ("Total Months: "			+ str(month_count) + '\n')
+outString+= ("Net Flux: $"			+ str(net_flux) + '\n')
+outString+= ("Average Change (per month): $"	+ str(average_change_per_month) + '\n')
+outString+= ("Greatest Account Increase: "	+ str(current_max_delta[0]) + " $" + str(current_max_delta[1]) + '\n')
+outString+= ("Greatest Account Decrease: "	+ str(current_min_delta[0]) + " $" + str(current_min_delta[1]) + '\n')
+
+print(outString)
+
+textfile = open('output.txt', 'w')
+textfile.write(outString)
+textfile.close()

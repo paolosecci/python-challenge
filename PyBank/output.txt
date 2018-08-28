@@ -1,0 +1,7 @@
+FINANCIAL ANALYSIS
+-----------------------
+Total Months: 86
+Net Flux: $38382578
+Average Change (per month): $446309.0465116279
+Greatest Account Increase: Feb-2012 $1170593
+Greatest Account Decrease: Sep-2013 $-1196225
